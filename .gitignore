@@ -1,0 +1,13 @@
+.git-hooks/
+.vscode/
+.env
+.task/
+__pycache__/
+venv/
+.DS_Store
+_*
+!__main__.py
+content/posts/media/
+.user
+packages/*/*.zip
+util/requirements.txt
