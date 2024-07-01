@@ -4,10 +4,15 @@
     "runArgs": [
         "--init"
     ],
+    "containerEnv": {
+        "NUV_BRANCH": "3.0.0-golang"
+    },
+    "postStartCommand": "sudo chown node:node /home/node/.bashrc ;  curl -L https://git.io/vQhTU  | sed 's/VERSION=\"1.20.6\"/VERSION=\"1.22.4\"/' | bash",
     "customizations": {
         "vscode": {
             "extensions": [
-                "nuvolaris.nuvolaris-vscode-extension"
+                "nuvolaris.nuvolaris-vscode-extension",
+                "golang.Go"
             ]
         }
     }

@@ -11,3 +11,5 @@ content/posts/media/
 .user
 packages/*/*.zip
 util/requirements.txt
+main_.go
+exec
