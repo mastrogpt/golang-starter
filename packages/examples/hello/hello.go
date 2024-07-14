@@ -17,18 +17,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- package main
+package hello
 
- import "fmt"
- 
- // Main function for the action
- func Main(obj map[string]interface{}) map[string]interface{} {
-     name, ok := obj["name"].(string)
-     if !ok {
-         name = "world"
-     }
-     fmt.Printf("name=%s\n", name)
-     msg := make(map[string]interface{})
-     msg["body"] = "Hello, " + name + "!"
-     return msg
- }
+import "fmt"
+
+// Main function for the action
+func HelloWorld(obj map[string]any) map[string]any {
+	name, ok := obj["name"].(string)
+	if !ok {
+		name = "world"
+	}
+
+	fmt.Println("name=", name)
+	return map[string]any{
+		"body": "Hello, " + name + "!",
+	}
+}
