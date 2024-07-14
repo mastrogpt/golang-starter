@@ -28,8 +28,8 @@ func HelloWorld(obj map[string]any) map[string]any {
 		name = "world"
 	}
 
-	fmt.Printf("name=%s\n", name)
-	msg := make(map[string]any)
-	msg["body"] = "Hello, " + name + "!"
-	return msg
+	fmt.Println("name=", name)
+	return map[string]any{
+		"body": "Hello, " + name + "!",
+	}
 }
