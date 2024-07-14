@@ -22,14 +22,14 @@ package hello
 import "fmt"
 
 // Main function for the action
-func HelloWorld(obj map[string]interface{}) map[string]interface{} {
+func HelloWorld(obj map[string]any) map[string]any {
 	name, ok := obj["name"].(string)
 	if !ok {
 		name = "world"
 	}
 
 	fmt.Printf("name=%s\n", name)
-	msg := make(map[string]interface{})
+	msg := make(map[string]any)
 	msg["body"] = "Hello, " + name + "!"
 	return msg
 }
