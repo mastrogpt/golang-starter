@@ -1,6 +1,6 @@
 // --param POSTGRES_URL $POSTGRES_URL
 
-package postgres
+package main
 
 import (
 	"database/sql"
@@ -10,7 +10,12 @@ import (
 )
 
 // Main function for the action
-func Postgres(obj map[string]any) map[string]any {
+func Main(obj map[string]any) map[string]any {
+	return postgres(obj)
+}
+
+// actual logic for the action
+func postgres(obj map[string]any) map[string]any {
 
 	url, ok := obj["POSTGRES_URL"].(string)
 	if !ok {

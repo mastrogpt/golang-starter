@@ -17,7 +17,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package hello
+package main
 
 import "fmt"
 
@@ -26,6 +26,7 @@ func Main(obj map[string]any) map[string]any {
 	return helloWorld(obj)
 }
 
+// actual logic for the action
 func helloWorld(obj map[string]any) map[string]any {
 	name, ok := obj["name"].(string)
 	if !ok {
