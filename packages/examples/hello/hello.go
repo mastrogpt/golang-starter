@@ -1,3 +1,6 @@
+//--kind go:default
+//--web true
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -19,7 +22,11 @@ package hello
 import "fmt"
 
 // Main function for the action
-func HelloWorld(obj map[string]any) map[string]any {
+func Main(obj map[string]any) map[string]any {
+	return helloWorld(obj)
+}
+
+func helloWorld(obj map[string]any) map[string]any {
 	name, ok := obj["name"].(string)
 	if !ok {
 		name = "world"
